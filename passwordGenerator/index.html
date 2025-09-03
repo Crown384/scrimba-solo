@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: whitesmoke;
+        }
+
+        .container {
+            width: 800px;
+            aspect-ratio: 1/1;
+            background-color: #1F2937;
+        }
+
+        h1 {
+            font-family: Karla;
+            font-weight: 800;
+            font-style: ExtraBold;
+            font-size: 40px;
+            /* leading-trim: NONE; */
+            line-height: 40px;
+            letter-spacing: -2.5%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Generate a <br> <span style="color: #059669;">random password</span></h1>
+        <button id="generatePassword" onclick="outPutPassword()">Generate Password</button>
+        <div class="pas1" id="pas1" onclick="copyText('pas1')"></div>
+        <div class="pas2" id="pas2" onclick="copyText('pas2')"></div>
+
+        <select name="pasLength" id="pasLength">
+            <option value="15">15</option>
+            <option value="12">12</option>
+            <option value="10">10</option>
+            <option value="8">8</option>
+            <option value="5" selected>5</option>
+        </select>
+        <select name="pasType" id="pasType">
+            <option value="letters">Letters only</option>
+            <option value="numbers">Numbers only</option>
+            <option value="symbols">Symbols only</option>
+            <option value="letters-numbers">Letters & Numbers</option>
+            <option value="letters-symbols">Letters & Symbols</option>
+            <option value="numbers-symbols">Numbers & Symbols</option>
+            <option value="all" selected>All</option>
+        </select>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
